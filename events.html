@@ -20,7 +20,8 @@
     </script>
     <!-- another example ***   -->
     <p id="user-info">No User</p>
-    <button id="btn-login">Login</button>
+    <button id="btn-login">Login</button> <br />
+    <br />
 
     <script>
       //   document
@@ -30,6 +31,28 @@
       //       const userInfoE1 = document.getElementById("user-info");
       //       userInfoE1.innerText = "User logged in successfully";
       //     });
+    </script>
+
+    <!-- handle input  text -->
+    <p id="name">No Name</p>
+    <input id="input-name" placeholder="Your name" type="text" />
+    <button id="btn-update">Update</button>
+    <script>
+      //set event listner
+      document
+        .getElementById("btn-update")
+        .addEventListener("click", function () {
+          console.log("Update button clicked");
+          //   2. get the text from the input field
+          const nameInput = document.getElementById("input-name");
+          console.log(nameInput);
+          const name = nameInput.value;
+          console.log("name", name);
+
+          /// set the name
+          const namep = document.getElementById("name");
+          namep.innerText = name;
+        });
     </script>
 
     <script src="handler.js"></script>
